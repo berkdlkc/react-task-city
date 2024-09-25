@@ -1,14 +1,149 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+body {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  color: white;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+/* Form konteyneri */
+.form-container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  text-align: center;
+}
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Başlık */
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+}
+
+/* Input alanları */
+input[type="text"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* Button stili */
+button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+/* Form için küçük bir açıklama */
+.form-container p {
+  font-size: 14px;
+  color: #666;
+  margin-top: 10px;
+}
+
+.container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.home_page_container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 400px;
+  text-align: center;
+}
+
+.home_page_button {
+  display: flex;
+  justify-content: center;
+}
+
+/* Tablonun genel stili */
+table {
+  color: black;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+/* Tablo başlıkları */
+thead {
+  background-color: #4caf50;
+  color: white;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Alternatif satır renkleri */
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Genel tablo stili */
+td,
+th {
+  border: 1px solid #ddd;
+}
+
+/* Tablo başlıklarını ortala */
+th {
+  text-align: center;
+  font-size: 18px;
+}
+
+/* Tablo başlıklarını biraz daha kalınlaştır */
+th {
+  font-weight: bold;
+}
+
+/* Sağ üst köşede link */
+.link-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.city-list-link {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.city-list-link:hover {
+  color: #0056b3;
 }

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addCity } from "../features/citySlice";
-
+import { Link } from "react-router-dom";
 
 const CityForm = () => {
 
@@ -9,16 +9,9 @@ const CityForm = () => {
     const[district, setDistrict] = useState('');
     const dispatch = useDispatch();
     
-    const cityList = useSelector((state) => state.cities.cityList)
-
     const handleAddCity = () => {
 
-        const cityListFiltered = cityList.filter(item => item.city.toLowerCase() === city.toLowerCase())
-
-        
-        if(cityListFiltered.length > 0) {
-            alert("Bu Şehir Eklenmiş Gülüm.")
-        } else if(!city || !district){
+        if (!city || !district){
             alert("Alanlar Boş Bırakılamaz.")
         } else {
             dispatch(addCity({ city, district}));
@@ -28,11 +21,28 @@ const CityForm = () => {
     }
 
     return (
-        <div>
+        <div className="form-container">
+
+            <div className="link-container">
+                <Link to="/city-list" className="city-list-link">
+                    Şehir Listesine Git
+                </Link>
+            </div>
+
             <h1>Şehir Ekle</h1>
             <form>
-                <input type="text" placeholder="İl" value={city} onChange={(e) => setCity(e.target.value)}></input>
-                <input type="text" placeholder="İlçe" value={district} onChange={(e) => setDistrict(e.target.value)}></input>
+                <input
+                    type="text"
+                    placeholder="İl"
+                    value={city}
+                    onChange={(e) => setCity(e.target.value)}
+                />
+                <input
+                    type="text"
+                    placeholder="İlçe"
+                    value={district}
+                    onChange={(e) => setDistrict(e.target.value)}
+                />
                 <button type="button" onClick={handleAddCity}>Ekle</button>
             </form>
         </div>
